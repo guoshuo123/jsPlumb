@@ -1,0 +1,358 @@
+{
+    "nodes": [
+        {
+            "id": "a64d00d7-4692-405a-ba6d-f1d3dfdc75c2",
+            "type": "action",
+            "text": "方龙",
+            "left": "168",
+            "top": "295",
+            "w": 140,
+            "h": 100,
+            "permissions_type": "0",
+            "position_key": "",
+            "permissions_eid": "方龙"
+        },
+        {
+            "id": "2547dc24-6dae-4132-8f9c-0856d14348b3",
+            "type": "question",
+            "text": "开始条件",
+            "left": "283",
+            "top": "164",
+            "w": 140,
+            "h": 100,
+            "permissions_type": "0",
+            "position_key": "",
+            "position_form": "eo5h7j54nysmm91v",
+            "permissions_eid": ""
+        },
+        {
+            "id": "7950b973-d6c2-410f-8878-dbc75e01e1ea",
+            "type": "action",
+            "text": "杨海滨",
+            "left": "530",
+            "top": "622",
+            "w": 140,
+            "h": 100,
+            "permissions_type": "0",
+            "position_key": "",
+            "permissions_eid": "杨海滨"
+        },
+        {
+            "id": "89b71032-4b22-4785-af60-95d4898eba37",
+            "type": "action",
+            "text": "张海龙",
+            "left": "530",
+            "top": "429",
+            "w": 140,
+            "h": 100,
+            "permissions_type": "0",
+            "position_key": "",
+            "permissions_eid": "张海龙"
+        },
+        {
+            "id": "54663c78-ea37-4ca2-b3d1-18a78ff911c8",
+            "type": "output",
+            "text": "结束",
+            "left": "74",
+            "top": "404",
+            "w": 140,
+            "h": 100,
+            "permissions_type": "0",
+            "position_key": "",
+            "permissions_eid": ""
+        },
+        {
+            "id": "a82972a0-c0c4-4d1e-a00a-4aea12ad752c",
+            "type": "action",
+            "text": "贾运珠",
+            "left": "74",
+            "top": "189",
+            "w": 140,
+            "h": 100,
+            "permissions_type": "0",
+            "position_key": "",
+            "permissions_eid": "贾运珠"
+        },
+        {
+            "id": "d965d50c-90ff-4cb9-b92a-6668667623d6",
+            "type": "action",
+            "text": "郭硕",
+            "left": "530",
+            "top": "189",
+            "w": 140,
+            "h": 100,
+            "permissions_type": "0",
+            "position_key": "",
+            "permissions_eid": "郭硕"
+        },
+        {
+            "id": "start",
+            "type": "start",
+            "text": "开始",
+            "left": "283",
+            "top": "7",
+            "w": 140,
+            "h": 100,
+            "permissions_type": "0",
+            "position_key": "",
+            "permissions_eid": ""
+        }
+    ],
+    "edges": [
+        {
+            "source": "a64d00d7-4692-405a-ba6d-f1d3dfdc75c2",
+            "target": "54663c78-ea37-4ca2-b3d1-18a78ff911c8",
+            "data": {
+                "label": " ",
+                "id": "21426047-9652-4317-8e6d-53726ad6add2",
+                "type": "connection",
+                "conditions": [
+                    ""
+                ],
+                "conditions_val": [
+                    ""
+                ],
+                "position_form": [
+                    " "
+                ],
+                "position_key": [
+                    " "
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "2547dc24-6dae-4132-8f9c-0856d14348b3",
+            "target": "a64d00d7-4692-405a-ba6d-f1d3dfdc75c2",
+            "data": {
+                "label": "包含 '呵呵呵呵呵'",
+                "id": "b10277fb-3d89-450b-89d7-6cc4aadf6ce0",
+                "type": "connection",
+                "conditions": [
+                    "包含"
+                ],
+                "conditions_val": [
+                    "呵呵呵呵呵"
+                ],
+                "position_form": [
+                    "eo5h7j54nysmm91v"
+                ],
+                "position_key": [
+                    "09edtm1ev"
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "2547dc24-6dae-4132-8f9c-0856d14348b3",
+            "target": "a82972a0-c0c4-4d1e-a00a-4aea12ad752c",
+            "data": {
+                "label": " 其他",
+                "id": "1012c5b8-647b-47eb-b7de-f36cc0f039b6",
+                "type": "connection",
+                "conditions": [
+                    "其他"
+                ],
+                "conditions_val": [
+                    ""
+                ],
+                "position_form": [
+                    " "
+                ],
+                "position_key": [
+                    " "
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "2547dc24-6dae-4132-8f9c-0856d14348b3",
+            "target": "89b71032-4b22-4785-af60-95d4898eba37",
+            "data": {
+                "label": " 级别是部门经理",
+                "id": "61d8b754-c146-4bbd-b9a4-c24fe5cc5ca4",
+                "type": "connection",
+                "conditions": [
+                    "员工级别判断"
+                ],
+                "conditions_val": [
+                    "部门经理"
+                ],
+                "position_form": [
+                    " "
+                ],
+                "position_key": [
+                    " "
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "2547dc24-6dae-4132-8f9c-0856d14348b3",
+            "target": "d965d50c-90ff-4cb9-b92a-6668667623d6",
+            "data": {
+                "label": " 普通员工 并且 份数>20",
+                "id": "fccbbb49-d9a9-4e70-a3e3-5f75cd51ae81",
+                "type": "connection",
+                "conditions": [
+                    "员工级别判断",
+                    "大于"
+                ],
+                "conditions_val": [
+                    "普通员工",
+                    "20"
+                ],
+                "position_form": [
+                    " ",
+                    "eo5h7j54nysmm91v"
+                ],
+                "position_key": [
+                    " ",
+                    "mnazcds84"
+                ],
+                "question_link": [
+                    "并且",
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "7950b973-d6c2-410f-8878-dbc75e01e1ea",
+            "target": "54663c78-ea37-4ca2-b3d1-18a78ff911c8",
+            "data": {
+                "label": " ",
+                "id": "132e4a9d-a81b-4404-a714-59dc0c3d082f",
+                "type": "connection",
+                "conditions": [
+                    ""
+                ],
+                "conditions_val": [
+                    ""
+                ],
+                "position_form": [
+                    " "
+                ],
+                "position_key": [
+                    " "
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "89b71032-4b22-4785-af60-95d4898eba37",
+            "target": "7950b973-d6c2-410f-8878-dbc75e01e1ea",
+            "data": {
+                "label": " 郭硕",
+                "id": "4a584fd8-d566-4b7f-88d8-5cc98f632c6b",
+                "type": "connection",
+                "conditions": [
+                    "等于"
+                ],
+                "conditions_val": [
+                    "郭硕"
+                ],
+                "position_form": [
+                    "eo5h7j54nysmm91v"
+                ],
+                "position_key": [
+                    "truename"
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "89b71032-4b22-4785-af60-95d4898eba37",
+            "target": "54663c78-ea37-4ca2-b3d1-18a78ff911c8",
+            "data": {
+                "label": "其他 ",
+                "id": "23c62f1d-deb7-4e47-80ba-469d330b0935",
+                "type": "connection",
+                "conditions": [
+                    "其他"
+                ],
+                "conditions_val": [
+                    ""
+                ],
+                "position_form": [
+                    " "
+                ],
+                "position_key": [
+                    " "
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "a82972a0-c0c4-4d1e-a00a-4aea12ad752c",
+            "target": "54663c78-ea37-4ca2-b3d1-18a78ff911c8",
+            "data": {
+                "label": " ",
+                "id": "bac234e7-d60e-4c80-aa53-237b873e5b7a",
+                "type": "connection",
+                "conditions": [
+                    ""
+                ],
+                "conditions_val": [
+                    ""
+                ],
+                "position_form": [
+                    " "
+                ],
+                "position_key": [
+                    " "
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "d965d50c-90ff-4cb9-b92a-6668667623d6",
+            "target": "89b71032-4b22-4785-af60-95d4898eba37",
+            "data": {
+                "label": " ",
+                "id": "5d9f163b-6723-42b9-943b-64126c565c6d",
+                "type": "connection",
+                "conditions": [
+                    ""
+                ],
+                "conditions_val": [
+                    ""
+                ],
+                "position_form": [
+                    " "
+                ],
+                "position_key": [
+                    " "
+                ],
+                "question_link": [
+                    ""
+                ]
+            }
+        },
+        {
+            "source": "start",
+            "target": "2547dc24-6dae-4132-8f9c-0856d14348b3",
+            "data": {
+                "label": " ",
+                "id": "41e6a1e7-8905-4a35-b07c-f848dee9437a",
+                "type": "default"
+            }
+        }
+    ],
+    "ports": []
+}

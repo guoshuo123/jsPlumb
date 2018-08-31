@@ -1,0 +1,384 @@
+.panel {
+  border: none;
+  background: #fafafa;
+  box-shadow: none;
+}
+.panel-default > .panel-heading {
+  background: #fafafa;
+  padding-left: 20px;
+  padding-right: 0;
+}
+.panel-title {
+  font-size: 18px;
+  color: #323642;
+  font-weight: normal;
+  height: 28px;
+  line-height: 28px;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border: none;
+  padding: 0;
+  padding-left: 42px;
+}
+.edit {
+  float: right;
+  font-size: 14px;
+  color: #b09578!important;
+}
+.edit img {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+.blocklist .item {
+  width: 25%;
+  font-size: 16px;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+}
+.blocklist .item .title {
+  color: #7a7a7a;
+  float: left;
+  padding-right: 20px;
+}
+.blocklist .item .text {
+  color: #323642;
+  float: left;
+}
+.userinfo {
+  position: relative;
+  display: table;
+  width: 100%;
+  padding: 15px 0;
+}
+.userinfo .advator {
+  width: 50%;
+  text-align: left;
+  padding-left: 30px;
+}
+.userinfo .advator .advator-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.userinfo .advator .name {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #323642;
+}
+.userinfo .btnswrap {
+  width: 50%;
+  text-align: right;
+}
+.userinfo .mg-r10 {
+  margin-right: 10px;
+}
+.userinfowrap {
+  width: 70%;
+}
+.userlist {
+  margin-bottom: 50px;
+}
+.user-info {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: table;
+  font-size: 14px;
+  padding: 25px 0;
+}
+.user-info .title {
+  color: #323642;
+  margin-bottom: 10px;
+}
+.user-info .text {
+  color: #7a7a7a;
+}
+.modbtn {
+  width: 80px;
+}
+.bottom-arrow {
+  padding-left: 7px;
+  font-size: 10px;
+}
+.downmore {
+  position: relative;
+  color: #676975;
+}
+.down-more {
+  position: relative;
+}
+.downmenu {
+  width: 134px;
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  z-index: 101;
+  background: #ffffff;
+  border-radius: 2px;
+  border: solid 1px #d3e0ea;
+}
+.downmenu li {
+  text-align: center;
+  border-bottom: solid 1px #d3e0ea;
+}
+.downmenu li a {
+  color: #999999;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: normal;
+  transition: all .4s;
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  box-sizing: border-box;
+  line-height: 35px;
+  height: 35px;
+}
+.downmenu li a:hover {
+  color: #323642;
+  background: #f5f8fa;
+}
+.downmenu li.arrow {
+  top: -14px;
+  right: 62px;
+  height: 0;
+  width: 0;
+  bottom: 0;
+  border: 7px solid transparent;
+  border-bottom: 7px solid #d3e0ea;
+  position: absolute;
+}
+.downmenu li.arrow span {
+  left: -7px;
+  top: -5px;
+  border: 7px solid transparent;
+  border-bottom: 7px solid #fff;
+  position: absolute;
+}
+.downmenu li:last-child {
+  border-bottom: none;
+}
+.down-more .downmenu {
+  left: 25px;
+  width: 150px;
+}
+.edit-wrap {
+  background: #fff;
+  min-height: 800px;
+}
+.edit-wrap .title-wrap {
+  height: 50px;
+  line-height: 50px;
+  background: #f1f0f0;
+  padding: 0 25px;
+}
+.edit-wrap .title-wrap .title {
+  color: #323642;
+  font-size: 16px;
+  float: left;
+}
+.edit-wrap .title-wrap .delete {
+  font-size: 20px;
+  color: #999999;
+  float: right;
+}
+.edit-wrap .form-wrap {
+  padding: 30px 100px 75px 45px;
+}
+.edit-wrap .formwrap {
+  padding: 30px 15px 75px 45px;
+}
+.edit-wrap .half .form-group {
+  float: left;
+  width: 50%;
+  margin-bottom: 33px;
+  position: relative;
+  height: 34px;
+}
+.edit-wrap .half .form-group label {
+  width: 80px;
+  line-height: 34px;
+  height: 34px;
+  font-weight: normal;
+  color: #7a7a7a;
+  font-size: 14px;
+}
+.edit-wrap .half .form-group .form-control {
+  width: 240px;
+}
+.area {
+  width: 100%!important;
+  height: 80px!important;
+}
+.area textarea.form-control {
+  width: 710px!important;
+  resize: none;
+  height: 80px;
+  box-shadow: none;
+  border-color: #e2e2e2;
+}
+.area textarea.form-control:focus {
+  border-color: #999;
+}
+.addwrap {
+  text-align: center;
+  border-top: solid 1px #eaeaea;
+  padding: 30px 0;
+}
+.addwrap .add {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  border: solid 1px #b09578;
+  color: #b09578;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.addwrap .add:hover {
+  background: #b09578;
+  color: #fff;
+}
+.btnwrap {
+  text-align: center;
+  margin-top: 30px;
+}
+.btnwrap .modbtn {
+  margin-right: 18px;
+}
+.error {
+  font-size: 13px;
+  color: red;
+  position: absolute;
+  left: 85px;
+  line-height: 25px;
+}
+.selectwrap {
+  height: 34px;
+}
+.name-icon {
+  background: url(../images/hmd.png) no-repeat;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+}
+.largeselect {
+  width: 130px!important;
+}
+.smallselect {
+  width: 80px!important;
+}
+.f-text {
+  height: 34px;
+  line-height: 34px;
+  padding: 0 5px;
+  font-size: 16px;
+  color: #211713;
+}
+.person-title {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 16px;
+}
+.block .com-title {
+  font-size: 16px;
+  color: #323642;
+  margin-bottom: 30px;
+}
+.itemblock {
+  position: relative;
+}
+.w100 {
+  width: 100%!important;
+}
+.empty {
+  padding: 0 148px 0 84px;
+  margin-top: 15px;
+}
+.radio-label {
+  width: auto!important;
+  padding-right: 10px;
+}
+.reset-label {
+  line-height: 18px!important;
+  float: left;
+}
+.smallinput {
+  width: 70px;
+}
+.w130 {
+  width: 130px;
+}
+.choose_img {
+  line-height: 30px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #b09578;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #b09578;
+  font-size: 14px;
+  margin-top: 2px;
+}
+.choose_img .choose {
+  font-size: 100px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.tips {
+  height: 34px;
+  line-height: 34px;
+  padding-left: 10px;
+}
+.w80 {
+  width: 80px;
+}
+.addmobile {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  color: #4a96db;
+  margin-left: 84px;
+}
+.addmobile:hover,
+.addmobile:active,
+.addmobile:focus {
+  color: #4a96db;
+}
+.delete {
+  color: #dd4646;
+  padding-left: 10px;
+}
+#myTabs .orangecolor:hover,
+#myTabs .orangecolor:focus {
+  color: #4a96db;
+}
+.dels {
+  position: absolute;
+  right: 100px;
+  bottom: 25px;
+  font-size: 14px;
+  color: #b09578;
+  height: 50px;
+  line-height: 50px;
+  text-align: right;
+  width: 100px;
+  cursor: pointer;
+  display: none;
+}

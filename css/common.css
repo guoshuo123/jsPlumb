@@ -1,0 +1,168 @@
+html,
+body {
+  height: 100%;
+}
+.all {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+.box-wrap {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.menu {
+  width: 100%;
+  background: #2CA2FC;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 16px;
+}
+.menu img {
+  vertical-align: -2px;
+}
+.menu .logo {
+  width: 200px;
+  text-align: center;
+}
+.menu .logo img {
+  vertical-align: middle;
+}
+.menu .menu-list li {
+  float: left;
+}
+.menu .menu-list a {
+  color: #fff;
+  display: inline-block;
+  padding: 0 25px;
+}
+.menu .menu-list a:hover {
+  background: #4386C5;
+}
+.menu .menu-list .icon {
+  margin-right: 5px;
+}
+.menu .menu-list .icon.index {
+  width: 16px;
+  height: 16px;
+}
+.menu .menu-list .icon.crm {
+  width: 17px;
+  height: 16px;
+}
+.menu .menu-list .icon.class {
+  width: 14px;
+  height: 16px;
+}
+.menu .menu-list .icon.money {
+  width: 23px;
+  height: 16px;
+}
+.menu .menu-list .icon.data {
+  width: 19px;
+  height: 16px;
+}
+.menu .menu-list .icon.set {
+  width: 19px;
+  height: 16px;
+}
+.menu .userstatus {
+  width: 204px;
+  text-align: center;
+}
+.menu .userstatus .smalluser {
+  width: 34px;
+  height: 34px;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+.menu .userstatus .signout {
+  color: #fff;
+}
+.left-panel {
+  width: 200px;
+  background: #ECF5FD;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-top: 5px;
+}
+.main-container {
+  width: 100%;
+  min-height: 1000px;
+  /*height: 100%;*/
+  background: #fff;
+  padding: 7px 30px 30px 30px;
+  box-sizing: border-box;
+}
+.left_nav {
+  width: 200px;
+  font-size: 14px;
+}
+.left_nav li .t {
+  height: 38px;
+  line-height: 38px;
+  padding: 0 0 0 30px;
+  position: relative;
+}
+.left_nav li .t i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 18px;
+  height: 38px;
+  background: url(../images/ioc_l.png) no-repeat 0 center;
+  cursor: pointer;
+}
+.left_nav li .t a {
+  color: #323642;
+  font-weight: 600;
+ /* display: block;*/
+}
+.left_nav li .t.hover a {
+  color: #474747;
+}
+.left_nav li.hover,
+.left_nav li .t.hover {
+  background: #B8D8F4;
+}
+.left_nav li .t.hover i {
+  background: url(../images/ioc_b.png) no-repeat 0 center;
+}
+.left_nav li .txt {
+  display: none;
+}
+.left_nav li .txt p {
+  line-height: 38px;
+  height: 38px;
+  padding-left: 50px;
+  overflow: hidden;
+}
+.left_nav li .txt p.active {
+  background: #B8D8F4;
+}
+.icons {
+  margin-right: 10px;
+  vertical-align: -3px;
+}
+.my {
+  width: 15px;
+  height: 15px;
+}
+.person {
+  width: 14px;
+  height: 16px;
+}
+.persons {
+  width: 18px;
+  height: 14px;
+}
+.sale {
+  width: 16px;
+  height: 15px;
+}

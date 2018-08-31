@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>流程设置</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/client_personal.css" rel="stylesheet">
+    <link href="./css/jsPlumb/jsplumbtoolkit-defaults.css" rel="stylesheet">
+    <link href="./css/jsPlumb/jsplumbtoolkit-demo.css" rel="stylesheet">
+    <link href="./css/jsPlumb/app.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/reset.css" rel="stylesheet">
+    <script src="./js/jquery.js"></script></head>
+<body>
+    <div class="all">
+        <div class="menu cf">
+            <div class="logo fl" style="padding-top:15px;">
+                <h3>设置流程模板</h3>
+            </div>
+        </div>
+        <div class="box-wrap cf" style='margin-top:30px;'>
+            <div class="main-container"> 
+            <script type="jtk" id="tmplStart">
+                <div style="left:${left}px;top:${top}px;width:${w}px;height:${h}px;" class="flowchart-object flowchart-start">
+                    <div style="position:relative">
+                        <svg:svg width="${w}" height="${h}">
+                            <svg:ellipse cx="${w/2}" cy="${h/2}" rx="${w/2}" ry="${h/2}" class="outer"/>
+                            <svg:ellipse cx="${w/2}" cy="${h/2}" rx="${(w/2) - 10}" ry="${(h/2) - 10}" class="inner"/>
+                            <svg:text text-anchor="middle" x="${ w / 2 }" y="${ h / 2 }" dominant-baseline="central">${text}</svg:text>
+                        </svg:svg>
+                    </div>
+                    <jtk-source port-type="start" filter=".outer" filter-negate="true"/>
+                </div>
+            </script>
+
+            <script type="jtk" id="tmplAction">
+                <div style="left:${left}px;top:${top}px;width:${w}px;height:${h/2}px;" class="flowchart-object flowchart-action">
+                    <div style="position:relative">
+                        <div class="node-edit node-action">
+                            <i class="fa fa-pencil-square-o"/>
+                        </div>
+                        <div class="node-delete node-action">
+                            <i class="fa fa-times"/>
+                        </div>
+                        <svg:svg width="${w}" height="${h/2}">
+                            <svg:rect x="0" y="0" width="${w}" height="${h/2}" class="outer drag-start"/>
+                            <svg:rect x="10" y="10" width="${w-20}" height="${(h/2)-20}" class="inner"/>
+                            <svg:text text-anchor="middle" x="${w/2}" y="${h/2/2}" dominant-baseline="central">${text}</svg:text>
+                        </svg:svg>
+                    </div>
+                    <jtk-source port-type="source" filter=".outer"/>
+                    <jtk-target port-type="target"/>
+                </div>
+            </script>
+
+            <script type="jtk" id="tmplQuestion">
+                <div style="left:${left}px;top:${top}px;width:${w}px;height:${h}px;" class="flowchart-object flowchart-question">
+                    <div style="position:relative">
+                        <div class="node-edit node-action">
+                            <i class="fa fa-pencil-square-o"/>
+                        </div>
+                        <div class="node-delete node-action">
+                            <i class="fa fa-times"/>
+                        </div>
+                        <svg:svg width="${w}" height="${h}">
+                            <svg:path d="M ${w/2} 0 L ${w} ${h/2} L ${w/2} ${h} L 0 ${h/2} Z" class="outer"/>
+                            <svg:path d="M ${w/2} 10 L ${w-10} ${h/2} L ${w/2} ${h-10} L 10 ${h/2} Z" class="inner"/>
+                            <svg:text text-anchor="middle" x="${w/2}" y="${h/2}" dominant-baseline="central">${text}</svg:text>
+                        </svg:svg>
+                    </div>
+                    <jtk-source port-type="source" filter=".outer"/>
+                    <jtk-target port-type="target"/>
+                </div>
+            </script>
+
+            <script type="jtk" id="tmplOutput">
+                <div style="left:${left}px;top:${top}px;width:${w}px;height:${h}px;" class="flowchart-object flowchart-output">
+                    <div style="position:relative">
+                        <div class="node-edit node-action">
+                            <i class="fa fa-pencil-square-o"/>
+                        </div>
+                        <div class="node-delete node-action">
+                            <i class="fa fa-times"/>
+                        </div>
+                        <svg:svg width="${w}" height="${h}">
+                            <svg:rect x="0" y="0" width="${w}" height="${h}"/>
+                            <svg:text text-anchor="middle" x="${w/2}" y="${h/2}" dominant-baseline="central">${text}</svg:text>
+                        </svg:svg>
+                    </div>
+                    <jtk-target port-type="target"/>
+                </div>
+            </script>
+
+            <script type="jtk" class="dlg" id="dlgText" title="编辑步骤">
+                <div class="form-group clearfix">
+                    <label for="inputPassword3" class="col-sm-2 control-label" style="font-size: 14px;line-height: 34px;">名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" size="50" jtk-focus jtk-att="text" value="${text}" jtk-commit="true" style='width:98%;'/>
+                    </div>
+                </div>
+                <div class="form-group clearfix" style='margin-bottom:1px;'>
+                    <label for="inputPassword3" class="col-sm-2 control-label" style='font-size: 14px;line-height: 34px;'>权限</label>
+                    <div class="col-sm-10">
+                        <label style="width:28%;line-height: 34px;">
+                            <input type="radio" size="20" jtk-focus jtk-att="permissions_type" jtk-commit="true" name="permissions_type" value='0' onclick="getType('this', 'eid')" /> 单人
+                        </label>
+                        <input type="text" size="50" jtk-focus jtk-att="permissions_eid" jtk-commit="true" style='width:70%;display:none' list="employeeList" />
+                        <datalist id="employeeList">
+                            <option>王佳佳</option>
+                        </datalist>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <label for="inputPassword3" class="col-sm-2 control-label" style='font-size: 14px;line-height: 34px;'></label>
+                    <div class="col-sm-10">
+                        <label style="width:28%">
+                            <input type="radio" size="20" jtk-focus jtk-att="permissions_type" jtk-commit="true" name="permissions_type" value='3' onclick="getType('this', 'zu_one')" /> 人员组-指定人
+                        </label>
+                        <input type="text" size="50" jtk-focus jtk-att="permissions_zu_one" jtk-commit="true" style="width:70%;display:none" list='staffList' />
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <label for="inputPassword3" class="col-sm-2 control-label" style='font-size: 14px;line-height: 34px;'></label>
+                    <div class="col-sm-10">
+                        <label style="width:28%">
+                            <input type="radio" size="20" jtk-focus jtk-att="permissions_type" jtk-commit="true" name="permissions_type" value='2' onclick="getType('this', 'zu_all')" /> 人员组-全部
+                        </label>
+                        <input type="text" size="50" jtk-focus jtk-att="permissions_zu_all" jtk-commit="true" style="width:70%;display:none" list='staffList' />
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <label for="inputPassword3" class="col-sm-2 control-label" style='font-size: 14px;line-height: 34px;'></label>
+                    <div class="col-sm-10">
+                        <label style="width:28%">
+                            <input type="radio" size="20" jtk-focus jtk-att="permissions_type" jtk-commit="true" name="permissions_type" value='1' onclick="getType('this', 'zu_ment')" /> 部门级别
+                        </label>
+                        <select jtk-att="permissions_zu_ment" jtk-commit="true" style="width:48%;margin-right:5px;display:none">
+                            <option value="0">请选择部门级别</option>
+                            <option value="3">所属部门主管</option>
+                            <option value="5">所属部门总监</option>
+                            <option value="4">事业部总经理</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <label for="inputPassword3" class="col-sm-2 control-label" style='font-size: 14px;line-height: 34px;'></label>
+                    <div class="col-sm-10">
+                        <label style="width:28%">
+                            <input type="radio" size="20" jtk-focus jtk-att="permissions_type" jtk-commit="true" name="permissions_type" value='4' onclick="getType('this', 'zd_ment')" /> 指定部门
+                        </label>
+                        <select jtk-att="permissions_zd_ment" jtk-commit="true" style="width:48%;margin-right:5px;display:none">
+                            <option value="0">请选择部门</option>
+                                <option value="4">产业基金</option>
+                                <option value="5">产业加速事业部</option>
+                            </select>
+                    </div>
+                </div>
+                <datalist id="staffList">
+                    <option>公关分组</option>
+                    <option>园区分组</option>
+                </datalist>
+            </script>
+
+            <script type="jtk" class="dlg" id="position_dlgText" title="编辑条件">
+                <div class="form-group clearfix">
+                    <label for="inputPassword3" class="col-sm-2 control-label" style='font-size: 14px;line-height: 34px;'>名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" size="50" jtk-focus jtk-att="text" value="${text}" jtk-commit="true" style='width:98%;'/>
+                    </div>
+                </div>
+            </script>
+
+            <script type="jtk" class="dlg" id="output_dlgText" title="编辑终点">
+                <div class="form-group clearfix">
+                    <label for="inputPassword3" class="col-sm-2 control-label" style='font-size: 14px;line-height: 34px;'>名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" size="50" jtk-focus jtk-att="text" value="${text}" jtk-commit="true" style='width:98%;'/>
+                    </div>
+                </div>
+            </script>
+
+            <script type="jtk" class="dlg" id="judge_dlgText" title="编辑条件">
+                <div class="form-group clearfix">
+                    <label for="inputPassword3" class="col-sm-2 control-label reset-label" style='font-size: 14px;line-height: 34px;'>名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" size="50" jtk-focus jtk-att="text" value="${text}" jtk-commit="true" style='width:98%;'/>
+                    </div>
+                </div>
+
+
+                <div class="question">
+                    <div class="note_question" data="0" style="padding-top: 15px; border-top: 1px #ccc solid;">
+                        <div style="float: right;margin-top: -12px;">
+                            <a href="javascript:;" style="color: red;" class="clone_remove">删除</a>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="inputPassword3" class="col-sm-2 control-label reset-label" style='font-size: 14px;line-height: 34px;'>条件判断项</label>
+                            <div class="col-sm-10">
+                                <select jtk-att="position_form[0]" jtk-commit="true" style="width:48%;margin-right:5px;" onchange="getFormKey('this')">
+                                    <option value=" ">请选择表单</option>
+                                                                <option value="eo5h7j54nysmm91v">章证照申请表单</option>
+                                                        </select>
+                                <select jtk-att="position_key[0]" jtk-commit="true" style='width:48%;'>
+                                    <option value=" ">请选择表单字段</option>
+                                        <option value="truename">姓名</option>
+                                        <option value="kyixfe6gb">申请公司主体</option>
+                                        <option value="station">岗位</option>
+                                        <option value="department">部门</option>
+                                        <option value="job_number">工号</option>
+                                        <option value="p137ymmsh">申请印签</option>
+                                        <option value="ndoita9u9">申请印签类型</option>
+                                        <option value="29k6to161">申请证照</option>
+                                        <option value="8c20ge93w">申请证照类型</option>
+                                        <option value="g5pyn5105">其他</option>
+                                        <option value="mnazcds84">份数</option>
+                                        <option value="09edtm1ev">用途</option>
+                                        <option value="nvl3dyqol">附件</option>
+                                        <option value="audit_at">申请时间</option>
+                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group clearfix">
+                            <label for="inputPassword3" class="col-sm-2 control-label reset-label" style='font-size: 14px;line-height: 34px;'>条件符号</label>
+                            <div class="col-sm-10">
+                                <select jtk-att="conditions[0]" jtk-commit="true" style="width:98%;">
+                                    <option></option>
+                                    <option>大于</option>
+                                    <option>大于等于</option>
+                                    <option>小于</option>
+                                    <option>小于等于</option>
+                                    <option>不等于</option>
+                                    <option>空白的</option>
+                                    <option>不是空白的</option>
+                                    <option>等于</option>
+                                    <option>包含</option>
+                                    <option>不包含</option>
+                                    <option>员工级别判断</option>
+                                    <option>其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="inputPassword3" class="col-sm-2 control-label reset-label" style='font-size: 14px;line-height: 34px;'>判断比较值</label>
+                            <div class="col-sm-10">
+                                <input type="text" size="50" jtk-focus jtk-att="conditions_val[0]" value="" jtk-commit="true" style="width:98%;" list="position_level" />
+                                <datalist id="position_level">
+                                    <option>普通员工</option>
+                                    <option>部门经理</option>
+                                    <option>部门总监</option>
+                                    <option>事业部总经理</option>
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="inputPassword3" class="col-sm-2 control-label reset-label" style='font-size: 14px;line-height: 34px;'> </label>
+                            <div class="col-sm-10">
+                                <select jtk-att="question_link[0]" jtk-commit="true" style="width:98%;">
+                                    <option> </option>
+                                    <option>并且</option>
+                                    <option>或者</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group clearfix" id="add_question">
+                        <label class="col-sm-2 control-label" style='font-size: 14px;line-height: 34px;'> </label>
+                        <div class="col-sm-10">
+                            <button href="javascript:;" class="jtk-dialog-button" style="line-height: 20px;height: 20px;" onclick="add()">
+                                点击增加条件
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </script>
+
+            <script type="jtk" class="dlg" id="dlgConfirm" title="请确认">
+                ${msg}?
+            </script>
+            <script type="jtk" class="dlg" id="dlgMessage" title="Message" cancel="false">
+                ${msg}
+            </script>
+            <script type="text/javascript">
+                
+            </script>
+
+            <div class="edit-wrap">
+                <div class="full-width-container">
+                    <div class="container" style='width:100%'>
+                        <div class="row">
+                            <div class="divider-30"></div>
+                            <div class="clearfix"></div>
+
+                            <div id="jtk-demo-flowchart" class="jtk-demo-main" style="width:100%;margin-top:-4px;">
+                                <!-- the node palette -->
+                                <div class="sidebar node-palette" style='height:700px'>
+                                    <ul style='margin-top: 15px;'>
+                                        <li jtk-node-type="question" title="Drag to add new">
+                                            <i class="icon-tablet"></i>添加条件
+                                        </li>
+                                        <li jtk-node-type="action" title="Drag to add new">
+                                            <i class="icon-eye-open"></i>添加步骤
+                                        </li>
+                                        <li jtk-node-type="output" title="Drag to add new">
+                                            <i class="icon-eye-open"></i>添加终点
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- this is the main drawing area -->
+                                <div class="jtk-demo-canvas" style='height:700px'>
+                                    <!-- controls -->
+                                    <div class="controls" style='left:30px;top:30px'>
+                                        <i class="fa fa-home" reset title="Zoom To Fit"></i>
+                                    </div>
+                                    <!-- miniview -->
+                                    <div class="miniview"></div>
+                                </div>
+                            </div>
+                            <pre>
+                            <div class="jtk-demo-dataset" style='display:block;'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/jsPlumb/jsPlumb-2.0.7.js"></script>
+    <script src="./js/jsPlumb/syntax-highlighter.js"></script>
+    <script src="./js/jsPlumb/jsPlumbToolkit-1.0.17.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/note.js"></script>
+</body>
+</html>
